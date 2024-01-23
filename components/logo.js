@@ -10,9 +10,16 @@ const LogoBox = styled.span`
   align-items: center;
   height: 30px;
   line-height: 20px;
-  padding: 10px;
+  padding: 40px;
 
   > svg {
+    transition: 200ms ease;
+  }
+
+  > img {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
     transition: 200ms ease;
   }
 
@@ -26,14 +33,15 @@ const Logo = () => {
     (<Link href="/" scroll={false}>
 
       <LogoBox>
-        <FootprintIcon />
+      <img src="/images/logo/logo.jpg" alt="Logo Image" />
+       
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           fontFamily='M PLUS Rounded 1c", sans-serif'
           fontWeight="bold"
           ml={3}
         >
-          Takuya Matsuyama
+          MYELEC
         </Text>
       </LogoBox>
 
