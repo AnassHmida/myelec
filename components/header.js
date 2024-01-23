@@ -1,6 +1,5 @@
-import NextLink from 'next/link';
-import { Flex, Container, useColorModeValue, css } from '@chakra-ui/react';
-import { ChevronRightIcon } from '@chakra-ui/icons';
+
+import { Flex, Container, css } from '@chakra-ui/react';
 
 export const HeaderSection = () => (
   <Flex

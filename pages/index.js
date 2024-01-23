@@ -1,25 +1,14 @@
-import NextLink from 'next/link'
+
 import {
-  Link,
   Container,
   Heading,
   Box,
-  SimpleGrid,
-  Button,
-  List,
-  ListItem,
+
   useColorModeValue
 } from '@chakra-ui/react'
-import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
+
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
-import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
-import Image from 'next/image'
 import { HeaderSection } from '../components/header'
 
 const Home = () => (
@@ -79,25 +68,15 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-        MyElec est une entreprise monégasque spécialisée en travaux d'électricité générale pour les particuliers (villas et appartements de luxe) et les professionnels (hôpitaux, magasins, bureaux, logements).
+        MyElec est une entreprise monégasque spécialisée en travaux d&apos;électricité générale pour les particuliers (villas et appartements de luxe) et les professionnels (hôpitaux, magasins, bureaux, logements).
 Nous intervenons sur le territoire Monégasque et les Alpes Maritimes pour les marchés privés et publics.
-Avec une expérience professionnelle de plus de 10 ans dans un grand groupe, leader du marché de l’électricité, les dirigeants de MyElec ont pu offrir des solutions électriques de qualité exceptionnelle dans le secteur du luxe avec des projets allant de 2 à 10 millions d’euros de chiffres d’affaires
-Un parcours engagé et passionné pour une vision d'avenir et un engagement envers la durabilité environnementale.
+Avec une expérience professionnelle de plus de 10 ans dans un grand groupe, leader du marché de l&apos;électricité, les dirigeants de MyElec ont pu offrir des solutions électriques de qualité exceptionnelle dans le secteur du luxe avec des projets allant de 2 à 10 millions d’euros de chiffres d’affaires
+Un parcours engagé et passionné pour une vision d&apos;avenir et un engagement envers la durabilité environnementale.
 Mêlant théorie et pratique, enthousiasme et dynamisme, une alliance des savoir-faire permettant de se projeter vers une société humaine et pérenne.{' '}
          
         
         </Paragraph>
-        {/* <Box align="center" my={4}>
-          <Button
-            as={NextLink}
-            href="/works"
-            scroll={false}
-            rightIcon={<ChevronRightIcon />}
-            colorScheme="teal"
-          >
-            My portfolio
-          </Button>
-        </Box> */}
+       
       </Section>
 
       {/* <Section delay={0.2}>
