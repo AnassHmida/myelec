@@ -7,7 +7,7 @@ const StyledDiv = chakra(motion.div, {
   }
 })
 
-const Section = ({ children, delay = 0 }) => (
+const Section = ({ children, delay = 0,margin }) => (
   <StyledDiv
     initial={{ y: 10, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
@@ -15,6 +15,8 @@ const Section = ({ children, delay = 0 }) => (
     mb={6}
     marginLeft={10}
     marginRight={10}
+    marginTop={ margin ? 100 : 0}
+    marginBottom={ margin ? 100 : 0}
   >
     {children}
   </StyledDiv>

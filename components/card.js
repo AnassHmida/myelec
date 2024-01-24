@@ -1,3 +1,4 @@
+// Import Montserrat Bold from Google Fonts
 import React, { useState } from 'react';
 import { Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
@@ -92,19 +93,31 @@ const Card = ({ dataImage, title, description }) => {
         ></motion.div>
         <motion.div
           className="card-info"
-          initial={{ y: '0%' }}
-          animate={{ y: isHovered ? '20%' : '40%' }}
+          initial={{ y: '100%' }}
+          animate={{ y: isHovered ? '0%' : '100%' }}
           transition={{ duration: 0.6, ease: [0.215, 0.61, 0.355, 1] }}
           padding="20px"
           position="absolute"
-
           bottom="0"
           color="#fff"
         >
-          <motion.h2 style={{ margin: '30px' }} initial={{ y: 170 }} animate={{ y: isHovered ?  '120%' : 170   }}>
+          <motion.h2
+            style={{
+              margin: '30px',
+              fontFamily: 'Montserrat, sans-serif', // Apply Montserrat font
+              fontWeight: 'bold', // Apply bold style
+              fontSize: '20px'
+            }}
+            initial={{ y: '100%' }}
+            animate={{ y: isHovered ? '0%' : '100%' }}
+          >
             {title}
           </motion.h2>
-          <motion.p style={{ margin: '30px' }} initial={{ y: '2000%'}} animate={{ y: isHovered ? 0 : '1000%'}}>
+          <motion.p
+            style={{ margin: '30px' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isHovered ? 1 : 0 }}
+          >
             {description}
           </motion.p>
         </motion.div>

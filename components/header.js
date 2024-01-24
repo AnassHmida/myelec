@@ -1,45 +1,40 @@
-
-import { Flex, Container, css } from '@chakra-ui/react';
+import { Flex, Container, Heading, css } from '@chakra-ui/react';
+import Section from './section';
 
 export const HeaderSection = () => (
   <Flex
     flexDirection="column"
     height="100vh"
     w="100%"
-    bgImage="url('/monaco-bg.jpg')" // Replace 'your_image_url' with the actual URL
+    bgImage="url('/monaco-bg.jpg')"
     bgSize="cover"
     css={{
       backdropFilter: 'blur(10px)',
-      animation: `${zoomIn} 10s ease-in-out infinite alternate`, // Animation applied directly
+      animation: `${zoomIn} 10s ease-in-out infinite alternate`,
     }}
     zIndex={50}
     display="flex"
     position="relative"
-    justifyContent="center" // Center the content horizontally
-    alignItems="center" // Center the content vertically
-    marginBottom="100px"
-    padding="50px" // Adjust the padding as needed
+    paddingTop={'14%'}
+    paddingLeft={'4%'}
   >
-    <Container
-      maxW="full"
-      fontSize={30}
-      textAlign="center" // Center the text
-      marginBottom="10px" // Add some space below the title
-    >
-      MYELEC
-    </Container>
-
+    <Section delay={0.2}>
+      <Container maxW="full" textAlign="left">
+        <Heading as="h1" fontSize={30} fontWeight="bold" fontFamily="'Montserrat', sans-serif">
+          MYELEC
+        </Heading>
+      </Container>
+    </Section>
     {/* Line under the title */}
-    <Container
-      maxW="full"
-      fontSize={24}
-      textAlign="center" // Center the text
-      marginTop="20px" // Add some space above the text
-    >
-      Votre Partenaire en Électricité dans l’Univers du Luxe
-      <br />
-      TRAVAUX D’INSTALLATION ET DE RENOVATION ELECTRIQUE
-    </Container>
+    <Section delay={0.4}>
+      <Container maxW="full" textAlign="left" marginTop="20px">
+        <Heading as="h2" fontSize={24} fontWeight="normal" fontFamily="'Montserrat', sans-serif">
+          Votre Partenaire en Électricité dans l’Univers du Luxe
+          <br />
+          Travaux d’installation et de rénovation électrique.
+        </Heading>
+      </Container>
+    </Section>
   </Flex>
 );
 

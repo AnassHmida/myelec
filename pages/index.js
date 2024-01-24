@@ -63,7 +63,7 @@ const Home = () => (
       </Box>
     </Box> */}
 
-      <Section delay={0.1}>
+      <Section delay={0.1} margin>
         <Heading as="h3" variant="section-title">
           L&apos;entreprise
         </Heading>
@@ -211,11 +211,14 @@ Mêlant théorie et pratique, enthousiasme et dynamisme, une alliance des savoir
         </Box>
       </Section> */}
 <InfoCards/>
-<Section delay={0.1}>
-        <Heading as="h3" variant="section-title">
-        Les marques que nous privilégions.
+<Section delay={0.1} margin>
+        <Heading as="h3" variant="section-title" style={{      
+          fontFamily: 'Montserrat, sans-serif', // Apply Montserrat font
+              fontWeight: 'bold', // Apply bold style
+              fontSize: '20px'}}>
+        Les marques que nous privilégions
         </Heading>
-        <Paragraph>
+        <Paragraph >
         Dans le domaine exigeant de l&apos;électricité, la qualité de l&apos;équipement est cruciale pour garantir des installations sûres et efficaces. Notre engagement envers l&apos;excellence se reflète dans le choix méticuleux des marques de référence que nous utilisons pour chaque projet. Ces partenariats stratégiques avec des leaders de l&apos;industrie renforcent notre capacité à offrir des solutions fiables et innovantes.
         </Paragraph>
 
