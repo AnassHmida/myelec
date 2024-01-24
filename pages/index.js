@@ -2,14 +2,14 @@
 import {
   Container,
   Heading,
-  Box,
 
-  useColorModeValue
 } from '@chakra-ui/react'
 
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
 import { HeaderSection } from '../components/header'
+
+import InfoCards from '../components/infocards'
 
 const Home = () => (
 
@@ -19,7 +19,7 @@ const Home = () => (
     >
 
 <HeaderSection/>
-      <Box
+      {/* <Box
 
         mb={6}
         p={3}
@@ -28,7 +28,7 @@ const Home = () => (
         css={{ backdropFilter: 'blur(10px)' }}
       >
         Hello, I&apos;m an indie app developer based in Japan!
-      </Box>
+      </Box> */}
 
     {/* <Box display={{ md: 'flex' }}>
       <Box flexGrow={1}>
@@ -65,7 +65,7 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          L&apos;entreprise
         </Heading>
         <Paragraph>
         MyElec est une entreprise monégasque spécialisée en travaux d&apos;électricité générale pour les particuliers (villas et appartements de luxe) et les professionnels (hôpitaux, magasins, bureaux, logements).
@@ -76,6 +76,8 @@ Mêlant théorie et pratique, enthousiasme et dynamisme, une alliance des savoir
          
         
         </Paragraph>
+
+       
        
       </Section>
 
@@ -208,6 +210,7 @@ Mêlant théorie et pratique, enthousiasme et dynamisme, une alliance des savoir
           </Button>
         </Box>
       </Section> */}
+<InfoCards/>
     </Container>
 
 )
