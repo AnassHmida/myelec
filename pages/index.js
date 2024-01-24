@@ -1,6 +1,6 @@
 
 import {
-  Container,
+  Box,
   Heading,
 
 } from '@chakra-ui/react'
@@ -10,12 +10,12 @@ import Section from '../components/section'
 import { HeaderSection } from '../components/header'
 
 import InfoCards from '../components/infocards'
+import BrandCarousel from '../components/brandcarousel'
 
 const Home = () => (
 
-   <Container
+   <Box
       maxW="full"
-
     >
 
 <HeaderSection/>
@@ -211,7 +211,19 @@ Mêlant théorie et pratique, enthousiasme et dynamisme, une alliance des savoir
         </Box>
       </Section> */}
 <InfoCards/>
-    </Container>
+<Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+        Les marques que nous privilégions.
+        </Heading>
+        <Paragraph>
+        Dans le domaine exigeant de l&apos;électricité, la qualité de l&apos;équipement est cruciale pour garantir des installations sûres et efficaces. Notre engagement envers l&apos;excellence se reflète dans le choix méticuleux des marques de référence que nous utilisons pour chaque projet. Ces partenariats stratégiques avec des leaders de l&apos;industrie renforcent notre capacité à offrir des solutions fiables et innovantes.
+        </Paragraph>
+
+        <BrandCarousel/>
+       
+      </Section>
+
+    </Box>
 
 )
 
