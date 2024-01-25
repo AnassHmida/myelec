@@ -1,12 +1,12 @@
 import NavBar from '../navbar'
-import { Box } from '@chakra-ui/react'
-import Footer from '../footer'
+import { Box, Container, Flex } from '@chakra-ui/react'
+ import Footer from '../footer'
 import Head from 'next/head'
 
 
 const Main = ({ children, router }) => {
   return (
-    <Box  >
+    <Flex  >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="MyElec est une entreprise monégasque spécialisée en travaux d'électricité générale pour les particuliers et les professionnels à Monaco et dans les Alpes Maritimes. Découvrez nos services de qualité exceptionnelle" />
@@ -31,14 +31,17 @@ const Main = ({ children, router }) => {
 
 
 
-      <Box >
+      <Flex >
     
 
         {children}
 
-        <Footer />
-      </Box>
-    </Box>
+        
+      </Flex>
+
+      
+     
+    </Flex>
   )
 }
 

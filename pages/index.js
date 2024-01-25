@@ -8,6 +8,7 @@ import Section from '../components/section';
 import { HeaderSection } from '../components/header';
 import InfoCards from '../components/infocards';
 import BrandCarousel from '../components/brandcarousel';
+import Footer from '../components/footer';
 
 const Home = () => (
   <Box maxW="full">
@@ -226,7 +227,7 @@ Mêlant théorie et pratique, enthousiasme et dynamisme, une alliance des savoir
         <BrandCarousel/>
        
       </Section>
-
+      <Footer />
     </Box>
 
 )
