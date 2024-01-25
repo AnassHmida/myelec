@@ -1,24 +1,25 @@
-
+import Head from 'next/head';
 import {
   Box,
   Heading,
-
-} from '@chakra-ui/react'
-
-import Paragraph from '../components/paragraph'
-import Section from '../components/section'
-import { HeaderSection } from '../components/header'
-
-import InfoCards from '../components/infocards'
-import BrandCarousel from '../components/brandcarousel'
+} from '@chakra-ui/react';
+import Paragraph from '../components/paragraph';
+import Section from '../components/section';
+import { HeaderSection } from '../components/header';
+import InfoCards from '../components/infocards';
+import BrandCarousel from '../components/brandcarousel';
 
 const Home = () => (
+  <Box maxW="full">
+  <Head>
+  <title>MyElec - Électricité Générale à Monaco et Alpes Maritimes</title>
+  <meta
+    name="description"
+    content="MyElec est une entreprise monégasque spécialisée en travaux d'électricité générale pour les particuliers et les professionnels à Monaco et dans les Alpes Maritimes. Découvrez nos services de qualité exceptionnelle."
+  />
+</Head>
+    <HeaderSection />
 
-   <Box
-      maxW="full"
-    >
-
-<HeaderSection/>
       {/* <Box
 
         mb={6}
