@@ -1,6 +1,6 @@
 import NavBar from '../navbar'
-import { Box, Container, Flex } from '@chakra-ui/react'
- import Footer from '../footer'
+import { Flex } from '@chakra-ui/react'
+//  import Footer from '../footer'
 import Head from 'next/head'
 
 
