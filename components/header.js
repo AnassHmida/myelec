@@ -20,7 +20,7 @@ export const HeaderSection = () => (
   >
     <Section delay={0.2}>
       <Container maxW="full" textAlign="left">
-        <Heading as="h1" fontSize={30} fontWeight="bold" fontFamily="'Montserrat', sans-serif">
+        <Heading as="h1" fontSize={30} fontWeight="bold" fontFamily="'Montserrat', sans-serif" color={'white'}>
           MYELEC
         </Heading>
       </Container>
@@ -28,7 +28,7 @@ export const HeaderSection = () => (
     {/* Line under the title */}
     <Section delay={0.4}>
       <Container maxW="full" textAlign="left" marginTop="20px">
-        <Heading as="h2" fontSize={24} fontWeight="normal" fontFamily="'Montserrat', sans-serif">
+        <Heading as="h2" fontSize={24} fontWeight="normal" fontFamily="'Montserrat', sans-serif" color={'white'}>
           Votre Partenaire en Électricité dans l’Univers du Luxe
           <br />
           Travaux d’installation et de rénovation électrique.

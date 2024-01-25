@@ -106,7 +106,8 @@ const Card = ({ dataImage, title, description }) => {
               margin: '30px',
               fontFamily: 'Montserrat, sans-serif', // Apply Montserrat font
               fontWeight: 'bold', // Apply bold style
-              fontSize: '20px'
+              fontSize: '20px',
+              color: 'white',
             }}
             initial={{ y: '100%' }}
             animate={{ y: isHovered ? '0%' : '100%' }}
@@ -114,7 +115,7 @@ const Card = ({ dataImage, title, description }) => {
             {title}
           </motion.h2>
           <motion.p
-            style={{ margin: '30px' }}
+            style={{ margin: '30px',color: 'white' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: isHovered ? 1 : 0 }}
           >

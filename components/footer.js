@@ -24,10 +24,15 @@ const Footer = () => {
         <Flex direction={{ base: 'column', lg: 'row' }} gap={{ base: '8', lg: '16', xl: '20' }}>
           <Flex direction="column" gap="8">
             {/* Replace with your NavBrand component */}
-            <Text textStyle="SectionParagraph"></Text>
+            <Text textStyle="SectionParagraph">contact@mcmyelec.mc</Text>
             <div>
-              <Text textStyle="SectionParagraph"></Text>
-              <Text textStyle="SectionParagraph"></Text>
+              <Text textStyle="SectionParagraph">
+              Directeur : 06.40.97.12.54 
+
+              </Text>
+              <Text textStyle="SectionParagraph">
+              Directeur travaux : 06.62.50.53.75
+              </Text>
             </div>
           </Flex>
           <Grid
