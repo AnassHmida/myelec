@@ -1,4 +1,5 @@
 import Layout from '../components/layouts/main'
+import { appWithTranslation } from 'next-i18next';
 import Fonts from '../components/fonts'
 import { AnimatePresence } from 'framer-motion'
 import Chakra from '../components/chakra'
@@ -32,4 +33,5 @@ function Website({ Component, pageProps, router }) {
   )
 }
 
-export default Website
+
+export default appWithTranslation(Website);

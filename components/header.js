@@ -1,8 +1,12 @@
 import { Flex, Container, Heading } from '@chakra-ui/react';
 import Section from './section';
+import { useTranslation } from 'react-i18next';
+
+export const HeaderSection = () => {
 
 
-export const HeaderSection = () => (
+  const {t} = useTranslation()
+return(
   <Flex
     flexDirection="column"
     height="100vh"
@@ -21,6 +25,7 @@ export const HeaderSection = () => (
         width: '100%',
         height: '100%',
         zIndex: 1,
+        animation: 'animatedBackground 15s linear infinite alternate',
       }}
     />
 
@@ -48,7 +53,7 @@ export const HeaderSection = () => (
       <Section delay={0.2}>
         <Container maxW="full" textAlign="left">
           <Heading as="h1"  fontSize={['5xl', '6xl', '8xl']} fontWeight="bold" fontFamily="'Montserrat', sans-serif" color={'white'}>
-            MYELEC
+           {t("title")}
           </Heading>
         </Container>
       </Section>
@@ -56,13 +61,14 @@ export const HeaderSection = () => (
       <Section delay={0.4}>
         <Container maxW="full" textAlign="left">
           <Heading as="h2" fontSize={24} fontWeight="normal" fontFamily="'Montserrat', sans-serif" color={'white'}>
-            Votre Partenaire en Électricité dans l’Univers du Luxe
-            <br />
-            Travaux d’installation et de rénovation électrique.
+          {t("description")}
           </Heading>
         </Container>
       </Section>
     </Flex>
   </Flex>
+
 );
-// Define the keyframes directly in the same file
+    }
+
+// Use the styles with emotion or add to your global CSS
