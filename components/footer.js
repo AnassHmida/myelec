@@ -54,7 +54,7 @@ const Footer = () => {
                 <Text textStyle="FooterLinkGroupTitle">ENTREPRISE</Text>
                 <Flex direction={{ base: 'column', sm: 'row', lg: 'column' }} gap="2">
                   <NavLink value="À propos" href="/about" />
-                  <NavLink value="Contact" href="/contact" />
+                  <NavLink value="Contact" href="/contactus" />
                   <NavLink value="Envoyer un devis" href="/quote" />
                   <NavLink value="Politique de confidentialité" href="/privacy-policy" />
                   <NavLink value="Conditions de service" href="/term-of-service" />
