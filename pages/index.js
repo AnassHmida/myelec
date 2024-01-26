@@ -22,7 +22,7 @@ const Home = () => (
   />
 </Head>
     <HeaderSection />
-
+{/* <FadingParagraphs/> */}
     
 
       <Section delay={0.1} margin>
