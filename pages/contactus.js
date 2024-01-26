@@ -75,7 +75,7 @@ const ContactForm = () => {
       <Box width="400px" m={10}>
         <Center mb={8}>
           <Text fontSize="xl" fontWeight="bold">
-            Contact us and we'll get back to you as soon as possible!
+            Contact us and we&apos;ll get back to you as soon as possible!
           </Text>
         </Center>
         <form onSubmit={handleSubmit}>
