@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flex, Box, Input, Textarea, Button, useToast, Center, Text, useTheme } from '@chakra-ui/react';
+import { Flex, Box, Input, Textarea, Button, useToast, Center, Text, useTheme, Spinner } from '@chakra-ui/react';
 
 const ContactForm = () => {
   const theme = useTheme(); // Access Chakra UI theme
@@ -8,6 +8,7 @@ const ContactForm = () => {
     email: '',
     message: '',
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const toast = useToast();
 
@@ -21,6 +22,8 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setIsLoading(true); // Set loading state
 
     try {
       const response = await fetch('/api/email', {
@@ -67,6 +70,8 @@ const ContactForm = () => {
         duration: 5000,
         isClosable: true,
       });
+    } finally {
+      setIsLoading(false); // Reset loading state
     }
   };
 
@@ -106,8 +111,8 @@ const ContactForm = () => {
             borderColor={theme.colors.gray[400]} // Access Chakra UI theme color
           />
           <Center>
-            <Button type="submit" colorScheme="red" size="md">
-              Send Message
+            <Button type="submit" colorScheme="red" size="md" disabled={isLoading}>
+              {isLoading ? <Spinner size="sm" color="white" /> : 'Send Message'}
             </Button>
           </Center>
         </form>
