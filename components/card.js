@@ -1,4 +1,3 @@
-// Import Montserrat Bold from Google Fonts
 import React, { useState } from 'react';
 import { Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
@@ -7,21 +6,23 @@ const Card = ({ dataImage, title, description }) => {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [transitionDuration, setTransitionDuration] = useState(0.5); // Set the initial duration
+  const [transitionDuration, setTransitionDuration] = useState(0.5);
 
   const handleMouseMove = (e) => {
     setMouseX(e.pageX - e.currentTarget.offsetLeft - e.currentTarget.offsetWidth / 2);
     setMouseY(e.pageY - e.currentTarget.offsetTop - e.currentTarget.offsetHeight / 2);
   };
 
+  console.log(transitionDuration)
+
   const handleMouseEnter = () => {
     setIsHovered(true);
-    setTransitionDuration(0); // Faster transition on hover
+    setTransitionDuration(0);
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    setTransitionDuration(1.5); // Slower transition on exit
+    setTransitionDuration(1.5);
   };
 
   return (
@@ -30,28 +31,23 @@ const Card = ({ dataImage, title, description }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={{
-        margin: '10px',
-        transform: `perspective(800px) rotateY(${isHovered ? mouseX * 0.03 : 0}deg) rotateX(${
-          isHovered ? mouseY * -0.03 : 0
-        }deg)`,
-        transition: `transform ${transitionDuration}s ease-in-out`, // Use transition property with dynamic duration
-      }}
+      mb={{ base: '4', md: '0' }}
+      flex={{ base: '0 0 100%', md: '0 0 50%', lg: '0 0 50%' }}
+      mx={{ base: 'auto', md: '4' }}
     >
       <Box
         className="card"
-        style={{
-          position: 'relative',
-          flex: '0 0 500px',
-          width: '500px',
-          height: '320px',
-          backgroundColor: '#333',
-          overflow: 'hidden',
-          borderRadius: '10px',
-          boxShadow:
-            'rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px',
-          transition: '1s cubic-bezier(0.445, 0.05, 0.55, 0.95)',
-        }}
+        position="relative"
+        width="100%"
+        height="0"
+        paddingBottom="66.67%"
+        backgroundColor="#333"
+        overflow="hidden"
+        borderRadius="10px"
+        boxShadow="rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px"
+        transition="1s cubic-bezier(0.445, 0.05, 0.55, 0.95)"
+        mx={{ base: 'auto', md: '4' }}
+        mt="4" // Margin top
       >
         <Box
           className="card-bg"
@@ -82,14 +78,14 @@ const Card = ({ dataImage, title, description }) => {
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
-            scale: isHovered ? 1.2 : 1.2, // Zoom effect on hover
-            translateX: isHovered ? mouseX * 0.1 : 0,
-            translateY: isHovered ? mouseY * 0.1 : 0,
-            transition: 'transform 0s', // Set transition duration to 0 for instant motion
+            scale: isHovered ? 1.2 : 1.2,
+            translateX: isHovered ? mouseX * 0.03 : 0, // Adjusted tilting effect
+            translateY: isHovered ? mouseY * -0.03 : 0, // Adjusted tilting effect
+            transition: 'transform 0.5s', // Added transition for tilting effect
             pointerEvents: 'none',
           }}
-          initial={{ scale: 1.2, translateX: mouseX * 0.1, translateY: mouseY * 0.1 }} // Initial position when entering
-          exit={{ scale: 1.2, translateX: mouseX * 0.1, translateY: mouseY * 0.1 }} // Exit position when leaving
+          initial={{ scale: 1.2, translateX: mouseX * 0.03, translateY: mouseY * -0.03 }}
+          exit={{ scale: 1.2, translateX: mouseX * 0.03, translateY: mouseY * -0.03 }}
         ></motion.div>
         <motion.div
           className="card-info"
@@ -104,10 +100,10 @@ const Card = ({ dataImage, title, description }) => {
           <motion.h2
             style={{
               margin: '30px',
-              fontFamily: 'Montserrat, sans-serif', // Apply Montserrat font
-              fontWeight: 'bold', // Apply bold style
+              fontFamily: 'Montserrat, sans-serif',
+              fontWeight: 'bold',
               fontSize: '20px',
-              color: 'white',
+              color: 'white'
             }}
             initial={{ y: '100%' }}
             animate={{ y: isHovered ? '0%' : '100%' }}
@@ -115,7 +111,7 @@ const Card = ({ dataImage, title, description }) => {
             {title}
           </motion.h2>
           <motion.p
-            style={{ margin: '30px',color: 'white' }}
+            style={{ margin: '30px' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: isHovered ? 1 : 0 }}
           >

@@ -6,12 +6,14 @@ import {
 import Paragraph from '../components/paragraph';
 import Section from '../components/section';
 import { HeaderSection } from '../components/header';
-import InfoCards from '../components/infocards';
+
 import BrandCarousel from '../components/brandcarousel';
-import Footer from '../components/footer';
+
+import Layout from '../components/layouts/article';
 
 const Home = () => (
-  <Box maxW="full">
+  <Layout title="Home">
+  <Box maxW="full" >
   <Head>
   <title>MyElec - Électricité Générale à Monaco et Alpes Maritimes</title>
   <meta
@@ -21,53 +23,14 @@ const Home = () => (
 </Head>
     <HeaderSection />
 
-      {/* <Box
-
-        mb={6}
-        p={3}
-        textAlign="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-        css={{ backdropFilter: 'blur(10px)' }}
-      >
-        Hello, I&apos;m an indie app developer based in Japan!
-      </Box> */}
-
-    {/* <Box display={{ md: 'flex' }}>
-      <Box flexGrow={1}>
-        <Heading as="h2" variant="page-title">
-          MYELEC
-        </Heading>
-        <p>Digital Craftsman ( Artist / Developer / Designer )</p>
-      </Box>
-      <Box
-        flexShrink={0}
-        mt={{ base: 4, md: 0 }}
-        ml={{ md: 6 }}
-        textAlign="center"
-      >
-        <Box
-          borderColor="whiteAlpha.800"
-          borderWidth={2}
-          borderStyle="solid"
-          w="100px"
-          h="100px"
-          display="inline-block"
-          borderRadius="full"
-          overflow="hidden"
-        >
-          <Image
-            src="/images/takuya.jpg"
-            alt="Profile image"
-            width="100"
-            height="100"
-          />
-        </Box>
-      </Box>
-    </Box> */}
+    
 
       <Section delay={0.1} margin>
-        <Heading as="h3" variant="section-title">
-          L&apos;entreprise
+      <Heading as="h3" variant="section-title" style={{      
+          fontFamily: 'Montserrat, sans-serif', // Apply Montserrat font
+              fontWeight: 'bold', // Apply bold style
+              fontSize: '20px'}}>
+          L&apos;ENTREPRISE
         </Heading>
         <Paragraph>
         MyElec est une entreprise monégasque spécialisée en travaux d&apos;électricité générale pour les particuliers (villas et appartements de luxe) et les professionnels (hôpitaux, magasins, bureaux, logements).
@@ -83,137 +46,9 @@ Mêlant théorie et pratique, enthousiasme et dynamisme, une alliance des savoir
        
       </Section>
 
-      {/* <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
-          Bio
-        </Heading>
-        <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
-        </BioSection>
-        <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Working as a freelancer
-        </BioSection>
-      </Section>
-
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          I ♥
-        </Heading>
-        <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
-        </Paragraph>
-      </Section>
-
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          On the web
-        </Heading>
-        <List>
-          <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoGithub />}
-              >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @inkdrop_app (English)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
-              >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-        </List>
-
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
-          >
-            My YouTube channel (&gt;150k subs)
-          </GridItem>
-          <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
-          >
-            A Markdown note-taking app
-          </GridItem>
-        </SimpleGrid>
-
-        <Heading as="h3" variant="section-title">
-          Newsletter
-        </Heading>
-        <p>
-          Join me on a behind-the-scenes coding journey. Weekly updates on
-          projects, tutorials, and videos
-        </p>
-
-        <Box align="center" my={4}>
-          <Button
-            as={NextLink}
-            href="https://www.devas.life/"
-            scroll={false}
-            leftIcon={<EmailIcon />}
-            colorScheme="teal"
-          >
-            Sign up my newsletter here
-          </Button>
-        </Box>
-      </Section> */}
-<InfoCards/>
-<Section delay={0.1} margin>
+   
+{/* <InfoCards/> */}
+<Section delay={0.1}>
         <Heading as="h3" variant="section-title" style={{      
           fontFamily: 'Montserrat, sans-serif', // Apply Montserrat font
               fontWeight: 'bold', // Apply bold style
@@ -224,12 +59,12 @@ Mêlant théorie et pratique, enthousiasme et dynamisme, une alliance des savoir
         Dans le domaine exigeant de l&apos;électricité, la qualité de l&apos;équipement est cruciale pour garantir des installations sûres et efficaces. Notre engagement envers l&apos;excellence se reflète dans le choix méticuleux des marques de référence que nous utilisons pour chaque projet. Ces partenariats stratégiques avec des leaders de l&apos;industrie renforcent notre capacité à offrir des solutions fiables et innovantes.
         </Paragraph>
 
-        <BrandCarousel/>
+  
        
       </Section>
-      <Footer />
+      <BrandCarousel/>
     </Box>
-
+    </Layout>
 )
 
 export default Home
