@@ -10,6 +10,8 @@ import { HeaderSection } from '../components/header';
 import BrandCarousel from '../components/brandcarousel';
 
 import Layout from '../components/layouts/article';
+import FadingParagraphs from '../components/info';
+import WhoWeAre from '../components/whoweare';
 
 const Home = () => (
   <Layout title="Home">
@@ -22,7 +24,10 @@ const Home = () => (
   />
 </Head>
     <HeaderSection />
-{/* <FadingParagraphs/> */}
+    <WhoWeAre/>
+    <FadingParagraphs/>
+
+
     
 
       <Section delay={0.1} margin>
