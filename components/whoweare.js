@@ -144,11 +144,11 @@ const ParallaxComponent = () => {
           />
           <Point
             title="Un parcours engagé et passionné pour une vision d'avenir et un engagement envers la durabilité environnementale."
-            imageSrc="https://source.unsplash.com/random/510x510"
+            imageSrc="https://frenchmoments.eu/wp-content/uploads/2014/08/Monaco-by-night-@kityyaya-via-Twenty20-scaled.jpg0"
           />
           <Point
             title="Mêlant théorie et pratique, enthousiasme et dynamisme, une alliance des savoir-faire permettant de se projeter vers une société humaine et pérenne."
-            imageSrc="https://source.unsplash.com/random/510x501"
+            imageSrc="https://frenchmoments.eu/wp-content/uploads/2014/08/Monaco-by-night-@kityyaya-via-Twenty20-scaled.jpg"
             isLeft
           />
         </div>
